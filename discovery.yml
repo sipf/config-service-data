@@ -2,14 +2,17 @@ spring:
   profiles:
     active: development
 server:
-  port: 8761
+  port: ${PORT:8761}
 eureka:
   instance:
+    hostname: localhost
     status-page-url-path: ${management.contextPath}/info
     health-check-url-path: ${management.contextPath}/health
   client:
     register-with-eureka: false
     fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/
 
 ---
 spring:
