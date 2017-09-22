@@ -25,6 +25,12 @@ security:
   user:
     name: admin
     password: password
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
 
 ---
 spring:
@@ -45,4 +51,9 @@ security:
   user:
     name: admin
     password: password
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
