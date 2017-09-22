@@ -1,6 +1,14 @@
 spring:
   profiles:
     active: development
+
+---
+spring:
+  profiles: production
+
+---
+spring:
+  profiles: test
 server:
   port: ${PORT:8761}
 eureka:
@@ -13,15 +21,6 @@ eureka:
     fetch-registry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/
-
----
-spring:
-  profiles: production
-
----
-spring:
-  profiles: test
-
 ---
 spring:
   profiles: development
