@@ -9,6 +9,10 @@ spring:
 ---
 spring:
   profiles: test
+security:
+  user:
+    name: admin
+    password: password
 server:
   port: ${PORT:8761}
 eureka:
@@ -24,3 +28,7 @@ eureka:
 ---
 spring:
   profiles: development
+security:
+  user:
+    name: admin
+    password: password
