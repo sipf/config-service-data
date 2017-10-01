@@ -1,7 +1,8 @@
 spring:
   profiles:
     active: development
-
+  application:
+    name: organism-ws
 ---
 spring:
   profiles: production
@@ -28,7 +29,7 @@ security:
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://discovery-service-ws.herokuapp.com/eureka
+      defaultZone: https://admin:password@discovery-service-ws.herokuapp.com/eureka
   instance:
     preferIpAddress: false
     hostname: ${DOMAIN_NAME}
